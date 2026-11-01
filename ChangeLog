@@ -1,3 +1,11 @@
+Unreleased - se7enxweb/expcomponents-persistent-object
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Renamed: The package is se7enxweb/expcomponents-persistent-object, Exponential's
+  maintained fork of Zeta Components PersistentObject. It replaces zetacomponents/persistent-object,
+  so packages that require zetacomponents/persistent-object keep working. Class names
+  (ezc*) are unchanged.
+
 1.8.2 - Thursday 04 March 2026
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

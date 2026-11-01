@@ -40,12 +40,15 @@
         ]
     },
     "description": "This component allows you to store an arbitrary data structures to a fixed database table. The component provides all the functionality needed to fetch, list, delete etc these datastructures.",
-    "homepage": "https://github.com/zetacomponents",
+    "homepage": "https://github.com/se7enxweb/expcomponents-persistent-object",
     "license": "Apache-2.0",
-    "name": "zetacomponents/persistent-object",
+    "name": "se7enxweb/expcomponents-persistent-object",
     "type": "library",
     "require": {
         "zetacomponents/base": "~1.8"
+    },
+    "replace": {
+        "zetacomponents/persistent-object": "self.version"
     },
     "require-dev": {
         "zetacomponents/database": "*",
