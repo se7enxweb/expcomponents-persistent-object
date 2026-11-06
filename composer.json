@@ -45,13 +45,14 @@
     "name": "se7enxweb/expcomponents-persistent-object",
     "type": "library",
     "require": {
-        "zetacomponents/base": "~1.8"
+        "php": ">=7.1",
+        "se7enxweb/expcomponents-base": "~1.8"
     },
     "replace": {
         "zetacomponents/persistent-object": "self.version"
     },
     "require-dev": {
-        "zetacomponents/database": "*",
+        "se7enxweb/expcomponents-database": "*",
         "zetacomponents/database-schema": "*",
         "zetacomponents/unit-test": "*"
     }
