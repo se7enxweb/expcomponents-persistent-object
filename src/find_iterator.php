@@ -116,7 +116,8 @@ class ezcPersistentFindIterator implements Iterator
      *
      * @return object
      */
-    public function current(): mixed
+    #[\ReturnTypeWillChange]
+    public function current()
     {
         return $this->object;
     }
@@ -129,7 +130,8 @@ class ezcPersistentFindIterator implements Iterator
      *
      * @return null
      */
-    public function key(): mixed
+    #[\ReturnTypeWillChange]
+    public function key()
     {
         return null;
     }

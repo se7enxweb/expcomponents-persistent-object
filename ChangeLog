@@ -12,6 +12,10 @@ Unreleased - se7enxweb/expcomponents-persistent-object
 - Added: NOTICE keeps the upstream copyright notices and names the fork;
   README.md describes the fork.
 - Added: A GitHub Actions workflow running the test suite on PHP 7.4 to 8.5.
+- Fixed: ezcPersistentFindIterator::current() and key() declared the return
+  type mixed, which PHP 7.4 reads as a class name: iterating over a find
+  result threw a TypeError there. They carry #[\ReturnTypeWillChange]
+  instead, as the other iterator methods do.
 
 
 1.8.2 - Thursday 04 March 2026
