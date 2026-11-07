@@ -43,7 +43,7 @@ require_once dirname( __FILE__ ) . '/../data/multi_relation_test_person.php';
  * @package PersistentObject
  * @subpackage Tests
  */
-class ezcPersistentSessionTest extends ezcTestCase
+abstract class ezcPersistentSessionTest extends ezcTestCase
 {
     protected $session = null;
     protected $hasTables = false;
@@ -76,7 +76,7 @@ class ezcPersistentSessionTest extends ezcTestCase
 
     public static function suite()
     {
-        return new \PHPUnit\Framework\TestSuite( 'ezcPersistentSessionTest' );
+        return new \PHPUnit\Framework\TestSuite( get_called_class() );
     }
 }
 

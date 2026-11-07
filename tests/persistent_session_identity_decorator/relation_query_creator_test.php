@@ -149,6 +149,11 @@ class ezcPersistentSessionIdentityDecoratorRelationQueryCreatorTest extends ezcP
             if ( $class->hasProperty( $attribute ) )
             {
                 $prop = $class->getProperty( $attribute );
+                // needed before PHP 8.1, deprecated in PHP 8.5
+                if ( PHP_VERSION_ID < 80100 )
+                {
+                    $prop->setAccessible( true );
+                }
                 return $prop->getValue( $object );
             }
             $class = $class->getParentClass();

@@ -66,6 +66,20 @@ class ezcPersistentDatabaseTypeTest extends ezcTestCase
         // DatabaseTypeTestObject::cleanup();
     }
 
+    /**
+     * The value an integer column has in a loaded object. PersistentObject
+     * passes column values on as the driver returns them, and PDO SQLite
+     * returns integer columns as strings before PHP 8.1.
+     */
+    protected function databaseInt( $int )
+    {
+        if ( $this->session->database->getName() === 'sqlite' && PHP_VERSION_ID < 80100 )
+        {
+            return (string) $int;
+        }
+        return $int;
+    }
+
     public function testLoadCorrectMysqlSqlite()
     {
         if ( $this->session->database->getName() !== 'mysql' && $this->session->database->getName() !== 'sqlite' )
@@ -75,11 +89,11 @@ class ezcPersistentDatabaseTypeTest extends ezcTestCase
         $obj = $this->session->load( 'DatabaseTypeTestObject', 1 );
 
         $this->assertSame(
-            1,
+            $this->databaseInt( 1 ),
             $obj->id
         );
         $this->assertSame(
-            23,
+            $this->databaseInt( 23 ),
             $obj->int
         );
         $this->assertSame(
@@ -380,11 +394,11 @@ class ezcPersistentDatabaseTypeTest extends ezcTestCase
         $obj  = $objs[1];
 
         $this->assertSame(
-            1,
+            $this->databaseInt( 1 ),
             $obj->id
         );
         $this->assertSame(
-            23,
+            $this->databaseInt( 23 ),
             $obj->int
         );
         $this->assertSame(

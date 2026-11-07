@@ -33,7 +33,7 @@ require_once dirname(__FILE__) . '/../persistent_session/test_case.php';
  * @package PersistentObject
  * @subpackage Tests
  */
-class ezcPersistentSessionIdentityDecoratorTest extends ezcPersistentSessionTest
+abstract class ezcPersistentSessionIdentityDecoratorTest extends ezcPersistentSessionTest
 {
     protected $idMap;
 
