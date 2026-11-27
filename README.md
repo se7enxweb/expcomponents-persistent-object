@@ -2,7 +2,7 @@
 
 This component allows you to store an arbitrary data structures to a fixed database table. The component provides all the functionality needed to fetch, list, delete etc these datastructures.
 
-This is the Exponential fork of [zetacomponents/PersistentObject](https://github.com/zetacomponents/PersistentObject),
+This is the Exponential Components fork of [zetacomponents/PersistentObject](https://github.com/zetacomponents/PersistentObject),
 maintained by 7x (se7en.x) and the Exponential Foundation for Exponential and anyone else
 who uses the Zeta Components PersistentObject component on current PHP versions. All credit for the
 component goes to the Zeta Components authors listed in `composer.json` and `CREDITS`;
